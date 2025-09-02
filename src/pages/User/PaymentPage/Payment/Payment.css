@@ -1,0 +1,123 @@
+/* ===========================
+   Payment Page Styling
+=========================== */
+
+.payment-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.payment-container h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.payment-container p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* Payment Methods */
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.payment-methods label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  background: #fafafa;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.payment-methods input[type="radio"] {
+  accent-color: #ff9800;
+  transform: scale(1.2);
+}
+
+.payment-methods label:hover {
+  background: #fff3e0;
+  border-color: #ff9800;
+}
+
+/* QR Section */
+.qr-code-section {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.qr-code-section p {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.qr-code-section img {
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* File Upload */
+.qr-code-section input[type="file"] {
+  display: block;
+  margin: 0 auto;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.qr-code-section input[type="file"]:hover {
+  border-color: #ff9800;
+}
+
+/* Screenshot Preview */
+.qr-code-section img[alt="Preview"] {
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Pay Button */
+.pay-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #ff9800;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.pay-btn:hover {
+  background: #e68900;
+}
+
+.pay-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}

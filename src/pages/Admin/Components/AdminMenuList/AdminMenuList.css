@@ -1,0 +1,166 @@
+/* AdminMenuList.css */
+
+/* Container */
+.admin-menu-container {
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  background-color: #f3f4f6;
+  min-height: 100vh;
+}
+
+/* Header */
+.admin-menu-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+/* Category Filter */
+.category-filter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.category-filter label {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.category-filter select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.category-filter select:focus {
+  outline: none;
+  border-color: #f4a261;
+  box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.2);
+}
+
+/* Table styles */
+.admin-menu-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.admin-menu-table th,
+.admin-menu-table td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #1e293b;
+}
+
+.admin-menu-table th {
+  color: #475569;
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.admin-menu-table tbody tr {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-menu-table tbody tr:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Images */
+.menu-item-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Buttons */
+.btn-toggle-available,
+.btn-delete {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-toggle-available.available {
+  background-color: #2a9d8f;
+  color: #fff;
+}
+
+.btn-toggle-available.unavailable {
+  background-color: #6b7280;
+  color: #fff;
+}
+
+.btn-toggle-available:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-delete {
+  background-color: #e63946;
+  color: #fff;
+}
+
+.btn-delete:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* No items message */
+.no-items {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .category-filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-menu-table th,
+  .admin-menu-table td {
+    font-size: 0.85rem;
+    padding: 10px 8px;
+  }
+
+  .menu-item-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .btn-toggle-available,
+  .btn-delete {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-menu-table th,
+  .admin-menu-table td {
+    padding: 8px 6px;
+    font-size: 0.8rem;
+  }
+
+  .menu-item-image {
+    width: 40px;
+    height: 40px;
+  }
+}

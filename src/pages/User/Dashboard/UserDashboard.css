@@ -1,0 +1,43 @@
+/* ===========================
+   User Dashboard Styling
+=========================== */
+
+.user-dashboard {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading (optional if you add one later) */
+.user-dashboard h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Content wrapper */
+.user-dashboard .dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* If you want sections inside dashboard */
+.user-dashboard .dashboard-section {
+  padding: 20px;
+  border-radius: 12px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  transition: all 0.2s ease-in-out;
+}
+
+.user-dashboard .dashboard-section:hover {
+  background: #fff9f0;
+  border-color: #ff9800;
+}

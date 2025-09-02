@@ -1,0 +1,159 @@
+/* === Base Navbar Styling === */
+.homeNav-main {
+  background-color: #ffffff;
+  border-bottom: 2px solid #ffe0b2;
+  padding: 12px 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* === Brand Logo === */
+.homeNav-brand {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ff5722 !important;
+  text-decoration: none;
+}
+
+/* === Nav Links === */
+.homeNav-links {
+  margin-left: auto;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.homeNav-link {
+  font-size: 16px;
+  color: #212121 !important;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.homeNav-link:hover {
+  background-color: #fff3e0;
+  color: #ff5722 !important;
+}
+
+/* === Sign In Button === */
+.homeNav-signin {
+  background-color: #ff5722;
+  color: #0c0b0b !important;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.homeNav-signin:hover {
+  background-color: #e64a19 !important;
+  color: #ffffff !important;
+}
+
+/* === Search Form === */
+.homeNav-searchForm {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 1.5rem;
+}
+
+.homeNav-searchWrapper {
+  position: relative;
+}
+
+.homeNav-searchInput {
+  padding: 10px 12px;
+  padding-right: 40px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 220px;
+  font-size: 14px;
+  background-color: #fff8f1;
+  transition: border-color 0.3s;
+}
+
+.homeNav-searchInput:focus {
+  border-color: #ff5722;
+  box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.2);
+  outline: none;
+}
+
+/* Autofill Fix */
+.homeNav-searchInput:-webkit-autofill {
+  box-shadow: 0 0 0 30px #fff8f1 inset !important;
+  -webkit-text-fill-color: #212121 !important;
+}
+
+/* === Search Button === */
+.homeNav-searchBtn {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 4px;
+  cursor: pointer;
+}
+
+.homeNav-searchIcon {
+  width: 20px;
+  height: 20px;
+}
+
+/* === Suggestions Dropdown === */
+.homeNav-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #ffccbc;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+  margin-top: 4px;
+}
+
+.homeNav-suggestion {
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #212121;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.homeNav-suggestion:hover {
+  background-color: #fff3e0;
+  color: #ff5722;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .homeNav-searchForm {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .homeNav-searchInput {
+    width: 100%;
+  }
+
+  .homeNav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+    gap: 0.8rem;
+  }
+
+  .homeNav-brand {
+    font-size: 20px;
+  }
+}

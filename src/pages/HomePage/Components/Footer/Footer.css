@@ -1,0 +1,181 @@
+/* Footer.css - Orange Theme to Match Header & Menu */
+
+.footer {
+  background: linear-gradient(135deg, #f8f9fa 0%, #f1f1f1 100%);
+  border-top: 1px solid #e0e0e0;
+  margin-top: auto;
+  position: relative;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Headings */
+.footer h5 {
+  color: #ff5722; /* orange accent */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.footer h6 {
+  color: #e64a19; /* darker orange */
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Paragraphs */
+.footer p {
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Quick Links */
+.footer ul.list-unstyled li {
+  margin-bottom: 0.5rem;
+}
+
+.footer ul.list-unstyled li a {
+  color: #6c757d;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.footer ul.list-unstyled li a:hover {
+  color: #ff5722;
+  transform: translateX(5px);
+}
+
+.footer ul.list-unstyled li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ff5722;
+  transition: width 0.3s ease;
+}
+
+.footer ul.list-unstyled li a:hover::after {
+  width: 100%;
+}
+
+/* Social Icons */
+.footer-social-icons {
+  margin-top: 1rem;
+}
+
+.footer-social-icons a {
+  display: inline-block;
+  margin-right: 15px;
+  color: #6c757d;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-social-icons a:hover {
+  color: #ff5722;
+  transform: translateY(-3px);
+}
+
+.footer-social-icons a:last-child {
+  margin-right: 0;
+}
+
+/* Keep brand-specific colors */
+.footer-social-icons a:hover svg[data-icon="facebook"] {
+  color: #1877f2;
+}
+
+.footer-social-icons a:hover svg[data-icon="instagram"] {
+  color: #e4405f;
+}
+
+.footer-social-icons a:hover svg[data-icon="twitter"] {
+  color: #1da1f2;
+}
+
+/* Horizontal rule */
+.footer hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e0e0e0, transparent);
+  margin: 2rem 0 1rem 0;
+}
+
+/* Copyright */
+.footer .text-center {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Contact Info */
+.footer .contact-info p {
+  margin-bottom: 0.3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+  
+  .footer h5,
+  .footer h6 {
+    margin-top: 2rem;
+  }
+  
+  .footer h5:first-child {
+    margin-top: 0;
+  }
+  
+  .footer-social-icons {
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+  
+  .footer ul.list-unstyled li a:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 2rem 0 !important;
+  }
+  
+  .footer h5 {
+    font-size: 1.3rem;
+  }
+  
+  .footer h6 {
+    font-size: 1rem;
+  }
+  
+  .footer-social-icons a {
+    font-size: 1.8rem;
+    margin-right: 20px;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect for entire footer */
+.footer:hover {
+  box-shadow: 0 -5px 20px rgba(255, 87, 34, 0.15); /* orange glow */
+  transition: box-shadow 0.3s ease;
+}

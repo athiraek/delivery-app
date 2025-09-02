@@ -1,0 +1,70 @@
+.menu-detail-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-detail-header {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.menu-detail-image {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.menu-detail-info {
+  flex: 1;
+}
+
+.menu-detail-info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.menu-detail-info p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.menu-detail-info strong {
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.menu-detail-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.menu-detail-buttons button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.menu-detail-buttons button:first-child {
+  background-color: #ffc107; /* Add to Cart */
+  color: #000;
+}
+
+.menu-detail-buttons button:last-child {
+  background-color: #28a745; /* Buy Now */
+  color: #fff;
+}

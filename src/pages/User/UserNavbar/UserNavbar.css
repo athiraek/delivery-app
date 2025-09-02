@@ -1,0 +1,143 @@
+/* Navbar wrapper */
+.user-navbar {
+  background-color: #ffffff;
+  border-bottom: 2px solid #ffccbc; /* light orange border */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar content (utility classes are being reused from Tailwind-like styles) */
+.user-navbar .max-w-6xl {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.user-navbar .flex {
+  display: flex;
+}
+
+.user-navbar .justify-between {
+  justify-content: space-between;
+}
+
+.user-navbar .items-center {
+  align-items: center;
+}
+
+.user-navbar .gap-4 > * + * {
+  margin-left: 1rem;
+}
+
+.user-navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.user-navbar li {
+  position: relative;
+}
+
+.user-navbar a {
+  text-decoration: none;
+  color: #212121;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.user-navbar a:hover {
+  background-color: #fff3e0;
+  color: #ff5722;
+}
+
+/* Profile Button */
+.user-profile-btn {
+  background-color: #fff3e0;
+  border: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.user-profile-btn:hover {
+  background-color: #ffe0b2;
+}
+
+/* Dropdown */
+.user-profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  background-color: #ffffff;
+  border: 1px solid #ffccbc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  min-width: 200px;
+  z-index: 100;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.user-profile-name {
+  font-weight: 600;
+  color: #ff5722;
+  margin-bottom: 4px;
+}
+
+.user-profile-email {
+  font-size: 14px;
+  color: #757575;
+  margin-bottom: 10px;
+}
+
+/* Logout Button */
+.user-logout-btn {
+  width: 100%;
+  background-color: #ff5722;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.user-logout-btn:hover {
+  background-color: #e64a19;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .user-navbar .gap-4 {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .user-profile-dropdown {
+    right: 0;
+    top: 40px;
+  }
+}

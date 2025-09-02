@@ -1,0 +1,108 @@
+/* Navbar container */
+.menu-navbar-container {
+  background: #ffffff; /* clean white background */
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Content wrapper (brand + links) */
+.menu-navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand */
+.menu-navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff5722; /* orange brand */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  letter-spacing: 1px;
+}
+
+.menu-navbar-brand:hover {
+  color: #e64a19; /* darker orange */
+}
+
+/* Toggle button */
+.menu-navbar-toggle {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff5722; /* orange icon */
+  display: none; /* hidden on desktop */
+}
+
+/* Links container */
+.menu-navbar-links {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.menu-navbar-nav-link {
+  text-decoration: none;
+  color: #ff5722; /* orange text */
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-navbar-nav-link:hover {
+  color: #e64a19; /* darker orange */
+}
+
+/* Sign In button style */
+.menu-navbar-signin-btn {
+  font-weight: 600;
+  border: 1px solid #ff5722;
+  padding: 0.4rem 0.9rem;
+  border-radius: 25px;
+  background: transparent;
+  color: #ff5722;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-navbar-signin-btn:hover {
+  background: #ff5722;
+  color: #fff;
+}
+
+/* ============= Responsive ============= */
+@media (max-width: 768px) {
+  .menu-navbar-toggle {
+    display: block; /* show toggle button */
+  }
+
+  .menu-navbar-links {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 65px;
+    right: 1rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 220px;
+  }
+
+  .menu-navbar-links.open {
+    display: flex; /* show when toggle clicked */
+  }
+
+  .menu-navbar-signin-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
