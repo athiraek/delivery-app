@@ -1,11 +1,12 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage/HomePage";
+import { Routes, Route } from "react-router-dom";
+// import AuthPage from './pages/auth/AuthPage';
 import User from "./pages/User/User";
+import ProtectedRoute from "./components/ProtectedRoute";
+import HomePage from "./pages/HomePage/HomePage";
 import Admin from "./pages/Admin/Admin";
 import AdminMenuList from "./pages/Admin/Components/AdminMenuList/AdminMenuList";
 import AdminDashboard from "./pages/Admin/Components/AdminDashboard/AdminDashboard";
-import AdminOrderPage from "./pages/Admin/Components/AdminOrderPage/AdminOrderPage";
 import AuthModal from "./pages/HomePage/Components/Signin/AuthModal";
 import Cart from "./pages/CartPage/CartPage";
 import MenuPage from "./pages/MenuPage/MenuPage";
@@ -16,23 +17,15 @@ import OrdersPage from "./pages/User/OrdersPage/OrdersPage";
 import UserCart from "./pages/User/UserCart/UserCart";
 import UserMenu from "./pages/User/UserMenu/UserMenu";
 import Payment from "./pages/User/PaymentPage/Payment/Payment";
+import AdminOrderPage from "./pages/Admin/Components/AdminOrderPage/AdminOrderPage";
 import OrderSuccess from "./pages/User/OrderSuccess/OrderSucess";
-import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
-    <BrowserRouter basename="/delivery-app">
+    <>
       <div className="App">
         <Routes>
-          {/* Public Routes */}
-          <Route path="/" element={<HomePage />} />
           <Route path="/auth" element={<AuthModal />} />
-          <Route path="/signin" element={<Signin />} />
-          <Route path="/Menu" element={<MenuPage />} />
-          <Route path="/MenuItem/:id" element={<MenuItemDetail />} />
-          <Route path="/cart" element={<Cart />} />
-
-          {/* User Protected Routes */}
           <Route
             path="/user-dashboard"
             element={
@@ -42,56 +35,6 @@ function App() {
             }
           />
           <Route
-            path="/user-menu"
-            element={
-              <ProtectedRoute>
-                <UserMenu />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/user-cart"
-            element={
-              <ProtectedRoute>
-                <UserCart />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/user/orders"
-            element={
-              <ProtectedRoute>
-                <OrdersPage />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/checkout"
-            element={
-              <ProtectedRoute admin={false}>
-                <CheckoutPage />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/payment"
-            element={
-              <ProtectedRoute>
-                <Payment />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/order-success"
-            element={
-              <ProtectedRoute admin={false}>
-                <OrderSuccess />
-              </ProtectedRoute>
-            }
-          />
-
-          {/* Admin Protected Routes */}
-          <Route
             path="/admin"
             element={
               <ProtectedRoute admin={true}>
@@ -99,6 +42,7 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route path="/" element={<HomePage />} />
           <Route
             path="/AdminMenuList"
             element={
@@ -123,9 +67,65 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route path="/Menu" element={<MenuPage />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/MenuItem/:id" element={<MenuItemDetail />} />
+
+          <Route
+            path="/user-menu"
+            element={
+              <ProtectedRoute>
+                <UserMenu />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/user-cart"
+            element={
+              <ProtectedRoute>
+                <UserCart />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="user/orders"
+            element={
+              <ProtectedRoute>
+                <OrdersPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/payment"
+            element={
+              <ProtectedRoute>
+                <Payment />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/checkout"
+            element={
+              <ProtectedRoute admin={false}>
+                <CheckoutPage />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/order-success"
+            element={
+              <ProtectedRoute admin={false}>
+                <OrderSuccess />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/signin" element={<Signin />} />
         </Routes>
+        
       </div>
-    </BrowserRouter>
+    </>
   );
 }
 
