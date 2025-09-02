@@ -8,7 +8,7 @@ import { StoreProvider } from './../src/Context/StoreContext.jsx' // ✅ Import 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/delivery-app">
       <StoreProvider> {/* ✅ Wrap App with StoreProvider */}
         <App />
       </StoreProvider>
